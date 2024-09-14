@@ -113,9 +113,65 @@ int function5(){
     std::cin>>num1;
     std::cout<<"enter second number"<<std::endl;
     std::cin>>num2;
-}
-int main(){
-    function4();
+    int add = num1 + num2;
+    std::cout<< "The Addition Of The Numbers Is" <<add<<std::endl;
+    int sub = num1 - num2;
+    std::cout<< "The Substraction Of The Numbers Is" <<sub<<std::endl;
+    int mul = num1 * num2;
+    std::cout<< "The Multiplication Of The Numbers Is" <<mul<<std::endl;
+    int div = num1 /num2;
+    std::cout<< "The Division Of The Numbers Is" <<div<<std::endl;
     return 0;
+}
 
+// 6.	Write a program that takes two floating-point numbers as input and prints their average.
+float function6(){
+    float num1,num2;
+    std::cout<<"enter first floating number"<<std::endl;
+    std::cin>>num1;
+    std::cout<<"enter second floating number"<<std::endl;
+    std::cin>>num2;
+    float avg = (num1 + num2) / 2;
+    std::cout<<"The Average Of The Two NUmber Is "<<avg<<std::endl;
+    return 0;
+}
+
+// 7.	Write a program that converts a floating-point number to an integer using typecasting.
+int function7(){
+    float number;
+    std::cout<<"enter the floating number"<<number<<endl;
+    std::cin>>number;
+    int num = int(number);
+    std::cout<<"The Number After Typecast Is"<<num;
+    return 0;
+}
+
+// 8.	Write a program to take a character as input and print its ASCII value.
+int function8(){
+    char ch;
+    std::cout<<"enter the character to get ASCII value"<<std::endl;
+    std::cin>>ch;
+    int asciiVal = ch;
+    std::cout<<"the ASCII Val Is " <<asciiVal;
+    return 0;
+}
+
+
+// 9.	Write a program to input a number and print whether it is even or odd.
+int function9(){
+    int num;
+    std::cout<<"enter a number to find odd or even"<<std::endl;
+    std:: cin>>num;
+    if(num % 2 == 0){
+        std::cout<<"given number is ever";
+    }
+    else{
+        std::cout<<"given number is odd";
+    }
+}
+
+
+int main(){
+    function9();
+    return 0;
 }
