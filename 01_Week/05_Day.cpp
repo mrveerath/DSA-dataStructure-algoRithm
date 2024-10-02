@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <regex>
 #include <cmath>
 using namespace std;
 
@@ -282,41 +283,48 @@ void function13()
 }
 
 // 14.	Determine if a given integer is a palindrome.
-void function14(){
-    int number,originalNum;
-    std::cout<<"enter a number to check if a given number is palindrome"<<std::endl;
-    std::cin>>number;
+void function14()
+{
+    int number, originalNum;
+    std::cout << "enter a number to check if a given number is palindrome" << std::endl;
+    std::cin >> number;
     int reversedNum = 0;
-    if(number < 0){
-        std::cout<<"nagetive number"<<std::endl;
+    if (number < 0)
+    {
+        std::cout << "nagetive number" << std::endl;
         number = -number;
     }
     originalNum = number;
-    while(number > 0){
+    while (number > 0)
+    {
         int modulus = number % 10;
         reversedNum = reversedNum * 10 + modulus;
         number = number / 10;
     }
-    std::cout<<originalNum<<std::endl;
-    std::cout<<reversedNum<<std::endl;
-    if(reversedNum == originalNum){
-        std::cout<<"the number is palindrome"<<std::endl;
+    std::cout << originalNum << std::endl;
+    std::cout << reversedNum << std::endl;
+    if (reversedNum == originalNum)
+    {
+        std::cout << "the number is palindrome" << std::endl;
     }
-    else{
-        std::cout<<"the number is Not palindrome"<<std::endl;
+    else
+    {
+        std::cout << "the number is Not palindrome" << std::endl;
     }
 }
 
 // 15.	Calculate the factorial of a number using a conditional loop.
-void function15(){
+void function15()
+{
     int number;
     int factorial = 1;
 
-    std::cout<<"enter a number to get factorial"<<std::endl;
-    std::cin>>number;
+    std::cout << "enter a number to get factorial" << std::endl;
+    std::cin >> number;
 
-    if(number < 0){
-        std::cout<<"cannot found the factorial of negative number"<<std::endl;
+    if (number < 0)
+    {
+        std::cout << "cannot found the factorial of negative number" << std::endl;
         return;
     }
 
@@ -325,28 +333,676 @@ void function15(){
         factorial *= number;
         number--;
     }
-    std::cout<<"the factorial is "<<factorial<<std::endl;
+    std::cout << "the factorial is " << factorial << std::endl;
 }
 
 // 16.	Find the sum of digits of a number.
-void function16(){
+void function16()
+{
     int number;
-    std::cout<<"enter a number to get sum of all the digits"<<std::endl;
-    std::cin>>number;
+    std::cout << "enter a number to get sum of all the digits" << std::endl;
+    std::cin >> number;
     int sum = 0;
-    while(number > 0){
+    while (number > 0)
+    {
         int modulus = number % 10;
         sum = sum + modulus;
-        number = number /10;
+        number = number / 10;
     }
-    std::cout<<"the sum Of the digits of the numbers is "<<sum<<endl;
+    std::cout << "the sum Of the digits of the numbers is " << sum << endl;
 }
 
 // 17.	Check if a number is an Armstrong number (e.g., 153 = 1^3 + 5^3 + 3^3).
+void function17()
+{
+    int number;
+    std::cout << "enter a number to check the number is armstrong or not" << std::endl;
+    std::cin >> number;
+    int originalNum = number;
+    int num = number;
+    int length = 0;
+    int armstrongNum = 0;
+    while (number > 0)
+    {
+        length = length + 1;
+        number = number / 10;
+    }
+    while (num > 0)
+    {
+        int modulus = number % 10;
+        armstrongNum = armstrongNum + pow(modulus, length);
+        number = number / 10;
+    }
+    if (originalNum == armstrongNum)
+    {
+        std::cout << "the number is armstrong number" << std::endl;
+    }
+    else
+    {
+        std::cout << "the number is not armstrong number" << std::endl;
+    }
+}
 
+// 18.	Determine if a given number is a Fibonacci number.
+// Condition 5x^2+4 || 5x^2-4 Is A Perfect Square
+// Condition Of Fibonacci f[n] = f[n-1]+f[n-2]
+
+void function18()
+{
+    int number;
+    std::cout << "enter a number to check its fibonacci or not" << std::endl;
+    std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered As Fibonacci Number" << std::endl;
+    }
+    if (number == 0 || number == 1)
+    {
+        std::cout << "The Number Is Fibonacci" << std::endl;
+    }
+    int a = 0, b = 1, fib = a + b;
+    while (fib <= number)
+    {
+        if (fib == number)
+        {
+        std:
+            cout << "The Number Is Fibonacci" << std::endl;
+            return;
+        }
+        a = b;
+        b = fib;
+        fib = a + b;
+    }
+    std::cout << "The Number Is Not Fibonacci" << std::endl;
+}
+
+// 19.	Find out if a number is a power of 2.
+void function19()
+{
+    int number;
+    std::cout << "enter number to check its power of 2 or not" << std::endl;
+    std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "Invalid Number" << std::endl;
+    }
+    while (number > 1)
+    {
+        if (number == 2)
+        {
+            std::cout << "Yes, the number is a power of 2." << std::endl;
+        }
+        if (number % 2 != 0)
+        {
+            std::cout << "the number is not a power of 2" << std::endl;
+        }
+        else
+        {
+        }
+        number = number / 2;
+    }
+}
+
+// 20.	Determine if a given age qualifies for different age groups (child, teenager, adult).
+void function20()
+{
+    int age;
+std:
+    cout << "enter your age to check your age group" << std::endl;
+    std::cin >> age;
+    if (age < 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered" << std::endl;
+    }
+    if (age > 0 && age <= 12)
+    {
+        std::cout << "Your Age Is : " << age << std::endl;
+        std::cout << "So You Are Children" << std::endl;
+        return;
+    }
+    else if (age > 12 && age <= 22)
+    {
+        std::cout << "Your Age Is : " << age << std::endl;
+        std::cout << "So You Are Teenager" << std::endl;
+        return;
+    }
+    else if (age > 22 && age <= 45)
+    {
+        std::cout << "Your Age Is : " << age << std::endl;
+        std::cout << "So You Are Adult" << std::endl;
+    }
+    else
+    {
+        std::cout << "Your Age Is : " << age << std::endl;
+        std::cout << "So You Are Old" << std::endl;
+    }
+}
+
+// 21.	Calculate the discount price based on a given purchase amount and discount percentage.
+void function21()
+{
+    int purchaseAmount;
+    float discountPercentage;
+    int discountPrice;
+    std::cout << "Enter The Purchase Amount" << std::endl;
+    std::cin >> purchaseAmount;
+    std::cout << "Enter The Discount Percentage" << std::endl;
+    std::cin >> discountPercentage;
+    if (purchaseAmount < 0 || discountPercentage < 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered As The Value" << std::endl;
+        return;
+    }
+    int actualPrice = purchaseAmount / (1 - (discountPercentage / 100));
+    discountPrice = actualPrice - discountPrice;
+    std::cout << "The Discount Price Is " << discountPrice << std::endl;
+}
+
+// 22.	Find the number of days in a given month and year.
+bool isLeapYear(int year)
+{
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+void function22()
+{
+    int year, month;
+    std::cout << "Enter The Year" << std::endl;
+    std::cin >> year;
+    std::cout << "Enter The MOnth" << std::endl;
+    std::cin >> month;
+    if (year < 0 || month < 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered" << std::endl;
+    }
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if (month == 2 && isLeapYear(year))
+    {
+        std::cout << "This Year Is Leap Year So There Are 29 Days " << std::endl;
+        return;
+    }
+    std::cout << "There Are " << daysInMonth[month - 1] << " Days" << std::endl;
+}
+
+// 23.	Check if a given string contains only digits.
+void function23()
+{
+    string word;
+    std::cout << "Enter String To Check It Contains The Digit Or Not" << std::endl;
+    std::cin >> word;
+    for (int i = 0; i < word.length(); i++)
+    {
+        if (isdigit(word[i]))
+        {
+            std::cout << "This String Contains Digit" << std::endl;
+            return;
+        }
+    }
+    std::cout << "This String Doesn't Contains Any Digit" << std::endl;
+}
+
+// 24.	Determine if a string is a valid email address.
+void function24()
+{
+    string email;
+    std::cout << "Enter Your Email To Validate" << std::endl;
+    std::cin >> email;
+    regex emailPattern(R"((\w+)(\.{0,1})(\w*)@(\w+)\.(\w+))");
+    if (regex_match(email, emailPattern))
+    {
+        std::cout << "This Is Valid Email" << std::endl;
+    }
+    else
+    {
+        std::cout << "This Is Not Valid Email" << std::endl;
+    }
+}
+
+// 25.	Classify a triangle based on the lengths of its sides (equilateral, isosceles, scalene).
+void function25()
+{
+    double side1, side2, side3;
+    std::cout << "Enter The Length Of Side 1" << std::endl;
+    std::cin >> side1;
+    std::cout << "Enter The Length Of Side 2" << std::endl;
+    std::cin >> side2;
+    std::cout << "Enter The Length Of Side 3" << std::endl;
+    std::cin >> side3;
+    if (side1 <= 0 || side2 <= 0 || side3 <= 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered As The Length" << std::endl;
+        return;
+    }
+    if ((side1 + side2 <= side3) || (side1 + side3 <= side2) || (side2 + side3 <= side1))
+    {
+        std::cout << "The lengths do not form a valid triangle" << std::endl;
+        return;
+    }
+    if (side1 == side2 && side1 == side3)
+    {
+        std::cout << "This Is Equilateral Triangle" << std::endl;
+        return;
+    }
+    if ((side1 == side2) || (side2 == side3) || (side1 == side3))
+    {
+        std::cout << "This Is Isoscale Triangle" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "This Is Scalene Triangle" << std::endl;
+        return;
+    }
+}
+
+// 26.	Check if a number is a perfect number (e.g., 6 = 1 + 2 + 3).
+void function26()
+{
+    int number;
+    std::cout << "Enter A Number To Check If Its Prefect Number Or Not" << std::endl;
+    std::cin >> number;
+    int sumOfDivider = 0;
+    if (number <= 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered" << std::endl;
+    }
+    for (int i = 1; i < number; i++)
+    {
+        if (number % i == 0)
+        {
+            sumOfDivider = sumOfDivider + i;
+        }
+    }
+    if (sumOfDivider == number)
+    {
+        std::cout << "The Number Is Perfect Divider" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "The Number Is Not Perfect Number" << std::endl;
+    }
+}
+
+// 27.	Find the largest prime number less than a given number.
+bool isPrime(int num)
+{
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+void function27()
+{
+    int number;
+    std::cout << "Enter Number To Get Prime Number Less Than The Number" << std::endl;
+    std::cin >> number;
+    int primeNumber = 1;
+    if (number <= 0)
+    {
+        std::cout << "Nagetive Value Can't Be Considered" << std::endl;
+        return;
+    }
+    if (number == 1)
+    {
+        std::cout << "The Value Is" << number << std::endl;
+        return;
+    }
+    for (int i = number; i > 0; i--)
+    {
+        if (isPrime(i))
+        {
+            std::cout << i << std::endl;
+            return;
+        }
+    }
+}
+
+// 28.	Convert a temperature from Celsius to Fahrenheit or vice versa based on user input.
+void function28()
+{
+    char ch;
+    float value, lastValue;
+    std::cout << "Select F For To Farhenheit And C For To Celsius" << std::endl;
+    std::cin >> ch;
+    ch = tolower(ch);
+    if (ch == 'f')
+    {
+        std::cout << "Enter Celsius Value To Get Into Farhenheit" << std::endl;
+        std::cin >> value;
+        lastValue = value * (9.0 / 5.0) + 32;
+        std::cout << lastValue << " Degree Farhenheit" << std::endl;
+        return;
+    }
+    else if (ch == 'c')
+    {
+        std::cout << "Enter Farhenheit Value To Get Into Celsius" << std::endl;
+        std::cin >> value;
+        lastValue = value - 32 * (5.0 / 9.0);
+        std::cout << lastValue << " Degree Celsius" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "Invalid Option" << std::endl;
+        return;
+    }
+}
+
+// 29.	Check if a given date is valid (e.g., 30th February is invalid).
+void function29()
+{
+    int year, month, day;
+    std::cout << "enter year" << std::endl;
+    std::cin >> year;
+    std::cout << "enter month" << std::endl;
+    std::cin >> month;
+    std::cout << "enter day" << std::endl;
+    std::cin >> day;
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if (isLeapYear(year))
+    {
+        daysInMonth[1] = 29;
+    }
+    else
+    {
+        daysInMonth[1] = 28;
+    }
+    if ((year > 2024) || (month > 12) || (day > daysInMonth[month - 1]))
+    {
+        std::cout << "Invalid Date" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "Valid Date";
+        return;
+    }
+}
+
+// 30.	Find the position of the first vowel in a string.
+bool isVowel(char character)
+{
+    character = tolower(character);
+    if ((character == 'a') || (character == 'b') || (character == 'i') || (character == 'o') || (character == 'u'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void function30()
+{
+    string word;
+    std::cout << "enter string to get position of first vowel" << std::endl;
+    std::cin >> word;
+    int indexOfVowel = 0;
+    for (int i = 0; i < word.length(); i++)
+    {
+        if (isVowel(word[i]))
+        {
+            indexOfVowel = i;
+            break;
+        }
+    }
+    std::cout << "the position of first vowel is index " << indexOfVowel << std::endl;
+}
+
+// 31.	Determine the eligibility for a loan based on income, credit score, and age.
+void function31()
+{
+    int min_income = 30000;
+    int min_credit_score = 650;
+    int min_age = 21;
+    int max_age = 65;
+    int user_income, user_credit_score, user_age;
+    std::cout << "enter your monthly income" << std::endl;
+    std::cin >> user_income;
+    std::cout << "enter your credit score" << std::endl;
+    std::cin >> user_credit_score;
+    std::cout << "enter your age" << std::endl;
+    std::cin >> user_age;
+    if ((user_age >= min_age) && (user_credit_score >= min_credit_score) && (user_income >= min_income) && (user_age <= max_age))
+    {
+        std::cout << "You Are Eligible For The Loan" << std::endl;
+        return;
+    }
+    std::cout << "You Are Not Eligible For The Loan";
+}
+
+// 32.	Check if a password meets complexity requirements (length, uppercase, lowercase, digit, special character).
+void function32()
+{
+    string password;
+    std::cout << "Enter Your Password" << std::endl;
+    std::cin >> password;
+    bool has_upper_case = false, has_lower_case = false, has_special_charecter = false, has_number = false;
+    if (!(password.length() >= 8))
+    {
+        std::cout << "Incorrect Password ! Passwrod Length Must Be Greater Than 8" << std::endl;
+        return;
+    }
+    for (int i = 0; i < password.length(); i++)
+    {
+        if (!has_lower_case)
+        {
+            if (islower(password[i]))
+            {
+                has_lower_case = true;
+            }
+        }
+        if (!has_upper_case)
+        {
+            if (isupper(password[i]))
+            {
+                has_upper_case = true;
+            }
+        }
+        if (!has_special_charecter)
+        {
+            if (!isalnum(password[i]))
+            {
+                has_special_charecter = true;
+            }
+        }
+        if (!has_number)
+        {
+            if (isdigit(password[i]))
+            {
+                has_number = true;
+            }
+        }
+    }
+
+    std::cout << "Your Password Contains " << password.length() << std::endl;
+    if ((has_lower_case) && (has_upper_case) && (has_special_charecter) && (has_number) && (password.length() >= 8))
+    {
+        std::cout << "Your Password Is Strong" << std::endl;
+    }
+    else
+    {
+        std::cout << "Your Password Is Weak" << std::endl;
+    }
+}
+
+// 33.	Calculate the monthly installment for a loan given the principal, interest rate, and number of months.
+
+void function33()
+{
+    int principal_amount, time_in_month;
+    float annual_interest_rate;
+    std::cout << "Enter Principal Amount" << std::endl;
+    std::cin >> principal_amount;
+    std::cout << "Enter Time In Months" << std::endl;
+    std::cin >> time_in_month;
+    std::cout << "Enter Rate Of Interest" << std::endl;
+    std::cin >> annual_interest_rate;
+    float monthly_interest_rate = annual_interest_rate / (12 * 100);
+    float numerator = principal_amount * monthly_interest_rate * std::pow(1 + monthly_interest_rate, time_in_month);
+    float denominator = std::pow(1 + monthly_interest_rate, time_in_month) - 1;
+    float e_m_i = numerator / denominator;
+    std::cout << "Your Monthly Installment Amount Is: " << e_m_i << std::endl;
+}
+
+// 34.	Determine if a user input is a valid Roman numeral.
+void function34()
+{
+    string roman_number;
+    std::cout << "enter the roman number" << std::endl;
+    std::cin >> roman_number;
+    char roman_val[] = {'m', 'd', 'c', 'l', 'x', 'v', 'i'};
+    bool is_proper_roman = false;
+    for (int i = 0; i < roman_number.length(); i++)
+    {
+        for (int j = 0; i < sizeof(roman_val) / sizeof(roman_val[0]); j++)
+        {
+            is_proper_roman = false;
+            if (tolower(roman_number[i]) == roman_val[j])
+            {
+                is_proper_roman = true;
+                break;
+            }
+        }
+        if (!is_proper_roman)
+        {
+            std::cout << "Your Provided Value Is Incorrect" << endl;
+            return;
+        }
+    }
+    std::cout << "Your Provided Value Is Correct" << std::endl;
+}
+
+
+// 35.	Classify an angle as acute, right, obtuse, or straight based on its value.
+void function35(){
+    int angle;
+    std::cout<<"Enter Your Angle"<<std::endl;
+    std::cin>>angle;
+    if(angle < 0){
+        angle = 360 - angle;
+    }
+    if(angle == 0){
+        std::cout<<"This Is Zero Angle"<<std::endl;
+        return;
+    }
+    if(angle > 0 && angle < 90){
+        std::cout<<"This Is Accute Angle"<<std::endl;
+        return;
+    }
+    if(angle == 90){
+        std::cout<<"This Is Right Angle"<<std::endl;
+        return;
+    }
+    if(angle > 90 && angle < 180){
+        std::cout<<"This Is Obstute Angle"<<std::endl;
+        return;
+    }
+    if(angle == 180){
+        std::cout<<"This Is Straight Angle"<<std::endl;
+        return;
+    }
+    if(angle > 180 && angle < 360){
+        std::cout<<"This Is Reflex Angle"<<std::endl;
+        return;
+    }
+    if(angle == 360){
+        std::cout<<"This Is Complete Angle"<<std::endl;
+        return;
+    }
+}
+
+
+// 36.	Calculate the grade of a student based on their marks using multiple conditions.
+void function36(){
+    int totalFullMark,markObtained;
+    std::cout<<"enter the total marks "<<std::endl;
+    std::cin>>totalFullMark;
+    std::cout<<"enter the marks you have obtained"<<std::endl;
+    std::cin>>markObtained;
+    double totalPercent = (static_cast<double>(markObtained) / totalFullMark) * 100;
+    if(totalPercent >= 90 && totalPercent <= 100 ){
+        std::cout<<"Outstanding! you have got "<<totalPercent<<" so your grade is A+"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 80 && totalPercent < 90 ){
+        std::cout<<"Excellent! you have got "<<totalPercent<<" so your grade is A"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 70 && totalPercent < 80 ){
+        std::cout<<"Very Good! you have got "<<totalPercent<<" so your grade is B+"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 60 && totalPercent < 70 ){
+        std::cout<<"Good! you have got "<<totalPercent<<" so your grade is B"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 50 && totalPercent < 60 ){
+        std::cout<<"Satisfactory! you have got "<<totalPercent<<" so your grade is C+"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 40 && totalPercent < 50){
+        std::cout<<"Acceptable! you have got "<<totalPercent<<" so your grade is C"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 30 && totalPercent < 40 ){
+        std::cout<<"Partially Acceptable! you have got "<<totalPercent<<" so your grade is D+"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 20 && totalPercent < 30 ){
+        std::cout<<"Insufficient! you have got "<<totalPercent<<" so your grade is D"<<std::endl;
+        return;
+    }
+    if(totalPercent >= 0 && totalPercent < 20 ){
+        std::cout<<"Very Insufficient! you have got "<<totalPercent<<" so your grade is E"<<std::endl;
+        return;
+    }
+}
+
+// 37.	Write a program to find the average of five numbers.
+void function37(){
+    int nums[5];
+    int totalSum = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        std::cout<<i<<". Enter The Number"<<std::endl;
+        std::cin>>nums[i];
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        totalSum = totalSum + nums[i];
+    }
+    int average = totalSum / 5;
+    std::cout<<"The Average Of The Number You Provide Is "<<average<<std::endl;
+    
+}
+
+// 38.	Write a program to find if a number is even or odd.
+void function38(){
+    int number;
+    std::cout<<"enter a number to find its odd or even"<<std::endl;
+    std::cin>>number;
+    if(number % 2 == 0){
+        std::cout<<"the number is even";
+    }else{
+        std::cout<<"the number is odd";
+    }
+}
 
 int main()
 {
-    function16();
+    function38();
     return 0;
 }
