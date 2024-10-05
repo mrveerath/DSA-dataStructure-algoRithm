@@ -221,7 +221,6 @@ void function11()
     std::cin >> num1;
     std::cout << "enter the second number" << std::endl;
     std::cin >> num2;
-    int highest, lowest;
     while (num2 != 0)
     {
         int reminder = num1 % num2;
@@ -885,124 +884,427 @@ void function34()
     std::cout << "Your Provided Value Is Correct" << std::endl;
 }
 
-
 // 35.	Classify an angle as acute, right, obtuse, or straight based on its value.
-void function35(){
+void function35()
+{
     int angle;
-    std::cout<<"Enter Your Angle"<<std::endl;
-    std::cin>>angle;
-    if(angle < 0){
+    std::cout << "Enter Your Angle" << std::endl;
+    std::cin >> angle;
+    if (angle < 0)
+    {
         angle = 360 - angle;
     }
-    if(angle == 0){
-        std::cout<<"This Is Zero Angle"<<std::endl;
+    if (angle == 0)
+    {
+        std::cout << "This Is Zero Angle" << std::endl;
         return;
     }
-    if(angle > 0 && angle < 90){
-        std::cout<<"This Is Accute Angle"<<std::endl;
+    if (angle > 0 && angle < 90)
+    {
+        std::cout << "This Is Accute Angle" << std::endl;
         return;
     }
-    if(angle == 90){
-        std::cout<<"This Is Right Angle"<<std::endl;
+    if (angle == 90)
+    {
+        std::cout << "This Is Right Angle" << std::endl;
         return;
     }
-    if(angle > 90 && angle < 180){
-        std::cout<<"This Is Obstute Angle"<<std::endl;
+    if (angle > 90 && angle < 180)
+    {
+        std::cout << "This Is Obstute Angle" << std::endl;
         return;
     }
-    if(angle == 180){
-        std::cout<<"This Is Straight Angle"<<std::endl;
+    if (angle == 180)
+    {
+        std::cout << "This Is Straight Angle" << std::endl;
         return;
     }
-    if(angle > 180 && angle < 360){
-        std::cout<<"This Is Reflex Angle"<<std::endl;
+    if (angle > 180 && angle < 360)
+    {
+        std::cout << "This Is Reflex Angle" << std::endl;
         return;
     }
-    if(angle == 360){
-        std::cout<<"This Is Complete Angle"<<std::endl;
+    if (angle == 360)
+    {
+        std::cout << "This Is Complete Angle" << std::endl;
         return;
     }
 }
 
-
 // 36.	Calculate the grade of a student based on their marks using multiple conditions.
-void function36(){
-    int totalFullMark,markObtained;
-    std::cout<<"enter the total marks "<<std::endl;
-    std::cin>>totalFullMark;
-    std::cout<<"enter the marks you have obtained"<<std::endl;
-    std::cin>>markObtained;
+void function36()
+{
+    int totalFullMark, markObtained;
+    std::cout << "enter the total marks " << std::endl;
+    std::cin >> totalFullMark;
+    std::cout << "enter the marks you have obtained" << std::endl;
+    std::cin >> markObtained;
     double totalPercent = (static_cast<double>(markObtained) / totalFullMark) * 100;
-    if(totalPercent >= 90 && totalPercent <= 100 ){
-        std::cout<<"Outstanding! you have got "<<totalPercent<<" so your grade is A+"<<std::endl;
+    if (totalPercent >= 90 && totalPercent <= 100)
+    {
+        std::cout << "Outstanding! you have got " << totalPercent << " so your grade is A+" << std::endl;
         return;
     }
-    if(totalPercent >= 80 && totalPercent < 90 ){
-        std::cout<<"Excellent! you have got "<<totalPercent<<" so your grade is A"<<std::endl;
+    if (totalPercent >= 80 && totalPercent < 90)
+    {
+        std::cout << "Excellent! you have got " << totalPercent << " so your grade is A" << std::endl;
         return;
     }
-    if(totalPercent >= 70 && totalPercent < 80 ){
-        std::cout<<"Very Good! you have got "<<totalPercent<<" so your grade is B+"<<std::endl;
+    if (totalPercent >= 70 && totalPercent < 80)
+    {
+        std::cout << "Very Good! you have got " << totalPercent << " so your grade is B+" << std::endl;
         return;
     }
-    if(totalPercent >= 60 && totalPercent < 70 ){
-        std::cout<<"Good! you have got "<<totalPercent<<" so your grade is B"<<std::endl;
+    if (totalPercent >= 60 && totalPercent < 70)
+    {
+        std::cout << "Good! you have got " << totalPercent << " so your grade is B" << std::endl;
         return;
     }
-    if(totalPercent >= 50 && totalPercent < 60 ){
-        std::cout<<"Satisfactory! you have got "<<totalPercent<<" so your grade is C+"<<std::endl;
+    if (totalPercent >= 50 && totalPercent < 60)
+    {
+        std::cout << "Satisfactory! you have got " << totalPercent << " so your grade is C+" << std::endl;
         return;
     }
-    if(totalPercent >= 40 && totalPercent < 50){
-        std::cout<<"Acceptable! you have got "<<totalPercent<<" so your grade is C"<<std::endl;
+    if (totalPercent >= 40 && totalPercent < 50)
+    {
+        std::cout << "Acceptable! you have got " << totalPercent << " so your grade is C" << std::endl;
         return;
     }
-    if(totalPercent >= 30 && totalPercent < 40 ){
-        std::cout<<"Partially Acceptable! you have got "<<totalPercent<<" so your grade is D+"<<std::endl;
+    if (totalPercent >= 30 && totalPercent < 40)
+    {
+        std::cout << "Partially Acceptable! you have got " << totalPercent << " so your grade is D+" << std::endl;
         return;
     }
-    if(totalPercent >= 20 && totalPercent < 30 ){
-        std::cout<<"Insufficient! you have got "<<totalPercent<<" so your grade is D"<<std::endl;
+    if (totalPercent >= 20 && totalPercent < 30)
+    {
+        std::cout << "Insufficient! you have got " << totalPercent << " so your grade is D" << std::endl;
         return;
     }
-    if(totalPercent >= 0 && totalPercent < 20 ){
-        std::cout<<"Very Insufficient! you have got "<<totalPercent<<" so your grade is E"<<std::endl;
+    if (totalPercent >= 0 && totalPercent < 20)
+    {
+        std::cout << "Very Insufficient! you have got " << totalPercent << " so your grade is E" << std::endl;
         return;
     }
 }
 
 // 37.	Write a program to find the average of five numbers.
-void function37(){
+void function37()
+{
     int nums[5];
     int totalSum = 0;
     for (int i = 0; i < 5; i++)
     {
-        std::cout<<i<<". Enter The Number"<<std::endl;
-        std::cin>>nums[i];
+        std::cout << i << ". Enter The Number" << std::endl;
+        std::cin >> nums[i];
     }
     for (int i = 0; i < 5; i++)
     {
         totalSum = totalSum + nums[i];
     }
     int average = totalSum / 5;
-    std::cout<<"The Average Of The Number You Provide Is "<<average<<std::endl;
-    
+    std::cout << "The Average Of The Number You Provide Is " << average << std::endl;
 }
 
 // 38.	Write a program to find if a number is even or odd.
-void function38(){
+void function38()
+{
     int number;
-    std::cout<<"enter a number to find its odd or even"<<std::endl;
-    std::cin>>number;
-    if(number % 2 == 0){
-        std::cout<<"the number is even";
-    }else{
-        std::cout<<"the number is odd";
+    std::cout << "enter a number to find its odd or even" << std::endl;
+    std::cin >> number;
+    if (number % 2 == 0)
+    {
+        std::cout << "the number is even";
+    }
+    else
+    {
+        std::cout << "the number is odd";
     }
 }
 
+// 39.	Write a program to display the multiplication table of a number.
+void function39()
+{
+    int number;
+    std::cout << "enter the number to get multiplicaion table" << std::endl;
+    std::cin >> number;
+    for (int i = 1; i <= 10; i++)
+    {
+        std::cout << number << " * " << i << " = " << number * i << std::endl;
+    }
+}
+
+// 40.	Create a function that checks if a string is a palindrome.
+void function40()
+{
+    string words;
+    std::cout << "enter a string to reverse" << std::endl;
+    std::cin >> words;
+    string reversedWord;
+    for (int i = words.length(); i >= 0; i--)
+    {
+        reversedWord = reversedWord + words[i];
+    }
+    std::cout << "the reversed word is " << reversedWord << std::endl;
+}
+
+// 41.	Write a function to calculate the power of a number (without using pow).
+void function41()
+{
+    int base, power, totalNum = 1;
+    std::cout << "enter the base number" << std::endl;
+    std::cin >> base;
+    std::cout << "enter the power of base number" << std::endl;
+    std::cin >> power;
+    int originalPower = power;
+    while (power > 0)
+    {
+        totalNum = totalNum * base;
+        power = power - 1;
+    }
+    std::cout << "the base " << base << " with Power " << originalPower << " is equal to " << totalNum << std::endl;
+}
+
+// 42.	Create a function to find the least common multiple (LCM) of two numbers.
+void function42()
+{
+    int firstNum, secondNum;
+    std::cout << "enter first number" << std::endl;
+    std::cin >> firstNum;
+    std::cout << "enter the second number" << std::endl;
+    std::cin >> secondNum;
+    int lcm = 1;
+    int minN = min(firstNum, secondNum);
+    for (int i = minN; i > 0; i--)
+    {
+        if (firstNum % i == 0 && secondNum % i == 0)
+        {
+            lcm = i;
+            break;
+        }
+        else
+        {
+            minN = minN - 1;
+        }
+    }
+
+    std::cout << "the lcm is " << lcm << std::endl;
+}
+
+// 43.	Write a recursive function to calculate the Fibonacci sequence.
+int function43(int number)
+{
+    if (number <= 0)
+    {
+        return 0;
+    }
+    if (number == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return function43(number - 1) + function43(number - 2);
+    }
+}
+
+// 44.	Write a function that converts a string to uppercase.
+void function44()
+{
+    string word;
+    std::cout << "enter a string to get it to UPPERCASE" << std::endl;
+    std::cin >> word;
+    for (int i = 0; i < word.length(); i++)
+    {
+        word[i] = toupper(word[i]);
+    }
+    std::cout << "the uppercase word is " << word << std::endl;
+}
+
+// 45.	Write a program to reverse an array.
+void function45()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << ",";
+    }
+    std::cout << endl;
+    for (int i = 0; i < size / 2; i++)
+    {
+        int temp = arr[i];
+        arr[i] = arr[size - 1 - i];
+        arr[size - 1 - i] = temp;
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << ",";
+    }
+}
+
+// 46.	Create a program to sort an array in ascending order.
+// Using Bubble Sort
+int function46()
+{
+    int arr[] = {1, 2, 3, 4, 53, 15, 27, 42, 58, 61, 74, 89, 100, 25};
+    int sizeOfArray = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < sizeOfArray; i++)
+    {
+        for (int j = 0; j < sizeOfArray - 1 - i; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < sizeOfArray; i++)
+    {
+        std::cout << arr[i] << ",";
+    }
+    return 0;
+}
+#include <unordered_map>
+// 47.	Write a program to find the largest element in an array.
+int function47()
+{
+    int arr[] = {1, 2, 3, 4, 53, 15, 27, 42, 58, 61, 74, 89, 100, 25};
+    int sizeOfArray = sizeof(arr) / sizeof(arr[0]);
+    int largest = 0;
+    for (int i = 0; i < sizeOfArray; i++)
+    {
+        if (arr[i] > largest)
+        {
+            largest = arr[i];
+        }
+    }
+    std::cout << "The Largest Value Of This Array Is " << largest << std::endl;
+    return 0;
+}
+// 48.	Create a program to find the frequency of a character in a string.
+int function48()
+{
+    string sentence;
+    std::cout << "Enter The String To Count The Frequency Of The Characters" << std::endl;
+    getline(std::cin, sentence);
+    std::unordered_map<char, int> frequency;
+    for (char c : sentence)
+    {
+        frequency[c]++;
+    }
+    for (const auto &pair : frequency)
+    {
+        std::cout << "Character: '" << pair.first << "' Frequency: " << pair.second << std::endl;
+    }
+}
+
+// 49	Write a program to remove all spaces from a string.
+char function49()
+{
+    string sentence;
+    std::cout << "Enter The String To Count The Frequency Of The Characters" << std::endl;
+    getline(std::cin, sentence);
+    string result;
+    for (int i = 0; i < sentence.length(); i++)
+    {
+        if (sentence[i] != ' ')
+        {
+            result = result + sentence[i];
+        }
+    }
+    std::cout << "The Sentence Without Space Is " << result << std::endl;
+}
+
+// 50.	Create a program to find the second largest element in an array.
+int function50()
+{
+    int arr[] = {1, 2, 3, 4, 53, 15, 27, 42, 58, 61, 74, 89, 100, 25};
+    int sizeOfArray = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < sizeOfArray; i++)
+    {
+        for (int j = 0; j < sizeOfArray - 1 - i; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    std::cout << "The Second Largest Element Of This Array Is " << arr[sizeOfArray - 2] << std::endl;
+    return 0;
+}
+
+// 51.	Write a program to check if a string is an anagram.
+#include <algorithm>
+#include <string>
+void function51()
+{
+    string phrase1, phrase2;
+    std::cout << "this program checks that the provided phrasea are anagram or not" << std::endl;
+    std::cout << "enter phrase to find its anagram or not" << std::endl;
+    getline(std::cin, phrase1);
+    std::cout << "enter phrase to find its anagram or not" << std::endl;
+    getline(std::cin, phrase2);
+    phrase1.erase(remove(phrase1.begin(), phrase1.end(), ' '), phrase1.end());
+    phrase2.erase(remove(phrase2.begin(), phrase2.end(), ' '), phrase2.end());
+    if (phrase1.length() != phrase2.length())
+    {
+        std::cout << "the both phrases are not anagram" << std::endl;
+        return;
+    }
+    std::sort(phrase1.begin(), phrase1.end());
+    std::sort(phrase2.begin(), phrase2.end());
+    if (phrase1 != phrase2)
+    {
+        std::cout << "the both phrases are not anagram" << std::endl;
+        return;
+    }
+    else
+    {
+        std::cout << "the both phrases are anagram" << std::endl;
+        return;
+    }
+}
+
+// 52.	Create a program to split a string into words.
+void function52()
+{
+    string sentence;
+    std::cout << "enter the sentence to split into words" << std::endl;
+    getline(std::cin, sentence);
+    std::vector<std::string> words;
+    string word;
+    for (int i = 0; i < sentence.length(); i++)
+    {
+        if (sentence[i] == ' ')
+        {
+            if (!word.empty())
+            {
+                words.push_back(word);
+                word.clear();
+            }
+        }
+        else {
+            word = word + sentence[i];
+        }
+    }
+    if (!word.empty()) {
+        words.push_back(word);
+    }
+    std::cout << "The words in the sentence are:" << std::endl;
+    for (const std::string& w : words) {
+        std::cout << w << std::endl;
+    }
+}
+
+
 int main()
 {
-    function38();
+    function52();
     return 0;
 }
