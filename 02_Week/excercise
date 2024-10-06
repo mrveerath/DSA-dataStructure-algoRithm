@@ -1,0 +1,76 @@
+# Basic Concepts of Classes and Objects
+
+1. Create a `Person` class with properties like `name`, `age`, and `address`, and create a method to display this information.
+2. Write a `Car` class with attributes `brand`, `model`, and `year`, and a method to start the car.
+3. Define a `Book` class with properties `title`, `author`, and `price`, and a method to print the details of the book.
+4. Create an `Animal` class with methods for basic actions like `eat`, `sleep`, and `move`.
+5. Write a class `Rectangle` that has two attributes: `length` and `width`. Include methods to calculate the area and perimeter.
+6. Create a `Student` class with attributes for storing student information (name, roll number, etc.) and a method to calculate the average marks from a list of marks.
+7. Design a `BankAccount` class with properties for the account number, balance, and methods for deposit, withdrawal, and checking the balance.
+8. Define a `Laptop` class with attributes for brand, model, RAM, and storage. Add methods to upgrade RAM and display laptop details.
+9. Write a `Movie` class with properties like `title`, `genre`, `rating`, and a method to print the movie details.
+10. Create a `Bike` class with methods to start and stop the bike. Add a method to check the current speed.
+
+# Constructors and Destructors
+
+11. Create a `Point` class representing a point in 2D space. Use a constructor to initialize the coordinates.
+12. Define a `Triangle` class and initialize its three sides using a constructor. Include a method to calculate the perimeter.
+13. Write a `City` class with properties like `name`, `population`, and `area`. Use a constructor to initialize them, and a destructor to clean up after the object is deleted.
+14. Implement a `Robot` class that initializes with a name and a purpose. Add a destructor to display a message when the object is deleted.
+15. Create a `Player` class where each player has a name, health, and attack power. Use a constructor to initialize the player attributes.
+
+# Inheritance
+
+16. Create a base class `Vehicle` with properties like `speed` and methods like `accelerate` and `brake`. Create a subclass `Car` that inherits from `Vehicle` and adds more attributes like `numberOfDoors`.
+17. Define a class `Shape` with methods to calculate the area and perimeter. Inherit `Rectangle` and `Circle` classes from it and override the methods for each shape.
+18. Write a base class `Employee` with properties `name` and `salary`. Create a subclass `Manager` that inherits `Employee` and adds additional features like `department`.
+19. Implement a `Person` class as a base class, then create a `Student` class that inherits from it and adds student-specific attributes like `rollNumber`.
+20. Create a class `Animal` with methods like `makeSound`. Inherit `Dog` and `Cat` classes from `Animal` and override the `makeSound` method for each animal.
+
+# Polymorphism
+
+21. Write a program that defines a `Shape` class with a method `draw()`. Create subclasses `Circle`, `Square`, and `Triangle`, each overriding the `draw()` method.
+22. Implement a base class `Instrument` with a method `play()`. Create subclasses `Guitar`, `Piano`, and `Violin`, each with its own version of `play()`.
+23. Create a class `Vehicle` with a method `fuelEfficiency()`. Inherit `Car` and `Bike` classes, each providing a different implementation of fuel efficiency.
+24. Implement a `Payment` class with a method `processPayment()`. Create subclasses `CreditCard`, `DebitCard`, and `PayPal` with different payment processing mechanisms.
+25. Define a base class `Media` with a method `playMedia()`. Create subclasses `Music` and `Video` that implement different ways to play media.
+
+# Encapsulation and Access Modifiers
+
+26. Create a `BankAccount` class with private attributes for balance and account number. Provide getter and setter methods for accessing these attributes.
+27. Implement a `PasswordManager` class that stores a password privately and allows the user to change it through a method.
+28. Write a `Company` class where the employee’s salary is private, but there are methods to get and set the salary after validation.
+29. Define a `Laptop` class where the RAM and storage properties are private. Create methods to access and modify these properties safely.
+30. Create a class `Book` where the price is a private attribute. Provide methods to access and update the price with validation logic.
+
+# Abstraction
+
+31. Create an abstract class `Appliance` with abstract methods `turnOn()` and `turnOff()`. Implement the methods in derived classes like `WashingMachine`, `Refrigerator`, and `Microwave`.
+32. Define an abstract class `Employee` with methods `calculateSalary()`. Create subclasses `FullTimeEmployee` and `PartTimeEmployee` that implement this method differently.
+33. Write an abstract class `Vehicle` with an abstract method `fuelEfficiency()`. Create classes `ElectricCar` and `DieselCar` to implement the method.
+34. Implement an abstract class `Device` with methods `turnOn()`, `turnOff()`, and `operate()`. Subclasses should define the specific behavior of each method.
+35. Create an abstract class `Shape` with an abstract method `area()`. Implement this method in concrete classes like `Circle` and `Square`.
+
+# Method Overloading and Overriding
+
+36. Write a `Calculator` class that overloads a method `add()` to handle different numbers of parameters and data types (integers, floats, etc.).
+37. Create a `Printer` class that overloads a method `print()` to print strings, integers, and objects differently.
+38. Define a `Person` class with an `introduce()` method. Override the method in a subclass `Student` to add more details to the introduction.
+39. Implement a class `Rectangle` with an `area()` method. Override it in a `Square` subclass to handle squares.
+40. Write a `Shop` class where the method `getDiscount()` is overloaded to handle different types of customers (regular, premium, etc.).
+
+# Relationships: Composition and Aggregation
+
+41. Create a `Library` class that contains a list of `Book` objects. Use composition to model this relationship.
+42. Write a `Car` class that contains an `Engine` object as part of its attributes. Use composition to build this relationship.
+43. Define a `Team` class that contains a list of `Player` objects. Implement aggregation where the players can exist outside the team as well.
+44. Implement a `School` class that contains multiple `Classroom` objects. Use aggregation to manage the relationship.
+45. Create a `House` class that contains objects of `Room` class. Each Room can exist independently, so use aggregation.
+
+# Advanced OOP Concepts
+
+46. Implement a class `Phone` where the camera and battery are separate classes but are part of the phone object through composition.
+47. Create a class `Game` that contains objects of `Player` and `Team`. The player can switch teams using aggregation.
+48. Write a `Course` class that contains `Student` and `Teacher` objects, where a teacher can teach multiple courses (many-to-many relationship).
+49. Create a `Shop` class where multiple `Product` objects are stored. Implement methods to add and remove products, showing the relationship between classes.
+50. Define a `University` class that aggregates `Department` objects. Each department can independently exist outside the university, but the relationship is managed via aggregation.
